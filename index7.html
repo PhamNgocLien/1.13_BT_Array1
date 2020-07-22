@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Delete element</title>
+</head>
+<body>
+<script>
+    let array = [1, 2, 9, 10, 16, 24, 37, 91, 100, 123];
+    let newArr = [];
+    let number = +prompt("Please input a number");
+    for (let i = 0; i < array.length; i++) {
+        if (array.indexOf(number) !== i) {
+            newArr.push(array[i]);
+        } else {
+            newArr.push(array[i+1]);
+            i++;
+        }
+    }
+    if (array.indexOf(number) !== -1) {
+        newArr.push(0);
+        alert("Đã xóa " + number + " khỏi mảng: " + newArr);
+    } else {
+        alert("Không có " + number + " trong mảng");
+    }
+</script>
+</body>
+</html>
